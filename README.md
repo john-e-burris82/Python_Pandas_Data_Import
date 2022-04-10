@@ -2,6 +2,7 @@
 
 There are numerous different ways to import data into Python. Below are some of the most common. These include flatfiles such .txt and .csv. Other common data types that an analyst may run into include Excel sheets, MATLAB, SAS, and relational database data. More recently for me, I came across importing pickle data. For a brief intro, click here <https://wiki.python.org/moin/UsingPickle>. Below are the main modules that will be needed for this overview. I will caveat that I am not providing the data files to complete this; however, most can be found on Kaggle or GitHub.
 # Importing course packages; you can add more too!
+
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -12,8 +13,7 @@ from sqlalchemy import create_engine
 import pickle
 # Importing Files
 
-Python has the ability to import files for reading and writing. Below you will find the code to pull in a flatfile. The main concept to remember when doing this is wether or not you want to read this file or write to this file. This will change how you open the file. In order to never forget to close a file, a context manager can be utilized. You can take this one step further and build a function to read in files faster. All code examples, except the function option, can be seen below. If you run the code, it will generate an error as is. Replace 'path/file.txt' with your actual file. This is base means to import data; however, most of us will want to do more with it than read or write. The rest of this will cover getting the data into a dataframe in which you can utilize for exploratory analysis or machine learning.
-## Caution is needed, this can permenately erase the data in the file. To avoid that, I commented out the write example and context editor.
+Python has the ability to import files for reading and writing. Below you will find the code to pull in a flatfile. The main concept to remember when doing this is wether or not you want to read this file or write to this file. This will change how you open the file. In order to never forget to close a file, a context manager can be utilized. You can take this one step further and build a function to read in files faster. All code examples, except the function option, can be seen below. If you run the code, it will generate an error as is. Replace 'path/file.txt' with your actual file. This is base means to import data; however, most of us will want to do more with it than read or write. The rest of this will cover getting the data into a dataframe in which you can utilize for exploratory analysis or machine learning. Caution is needed, this can permenately erase the data in the file. To avoid that, I commented out the write example and context editor.
 
 #Open a .txt file as read only
 filename = 'seaslug.txt'
